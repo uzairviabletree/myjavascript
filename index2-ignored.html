@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+
+
+</head>
+
+<body>
+    <h1>User Authenticatiom</h1>
+    <form id="contactform" >
+        <p>
+            Fullname: <input type="text" name="fullname" id="fullname" required />
+        </p>
+        <p>
+            Email: <input type="email" name="email" id="email" required />
+        </p>
+        <p>
+            Subject: <input type="text" name="subject" id="subject" />
+        </p>
+        <p>
+            Message: <textarea name="message" id="message"></textarea>
+        </p>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAO76XN1vs9KDFGE0TvAqJLG9xAkWr6T3A",
+          authDomain: "mydemoprojects1.firebaseapp.com",
+          projectId: "mydemoprojects1",
+          storageBucket: "mydemoprojects1.appspot.com",
+          messagingSenderId: "284031118281",
+          appId: "1:284031118281:web:fecc0787321faf58ae5618"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var firestore =  firebase.firestore();
+
+
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+    e.preventDefault();
+    console.log("123");
+}
+
+
+
+
+        // const db = firestore.collection("formData");
+        // let submitButton= document.getElementById("submit")
+
+// submitButton.addeventListener("click", (e)=> {
+//     e.preventDefault()
+
+//     let firstname =  document.getElementById("fullname").value
+//     let email =  document.getElementById("email").value
+//     let subject =  document.getElementById("subject").value
+//     let message =  document.getElementById("message").value
+
+// db.doc().set({
+//     fullname: firstname,
+//     email: email,
+//     subject:subject,
+//     country: country
+// }).then(() => {
+//     console.log("saved");
+// }).catch((e) => {
+// console.log(e);
+// });
+// })
+
+
+
+
+
+
+      </script>   
+        
+</body>
+</html>
