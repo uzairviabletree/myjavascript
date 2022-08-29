@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <title>Document</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
-
-</head>
-
-<body>
-    <div id="my-signin"></div>
+    <!-- <meta
+      name="google-signin-client_id"
+      content="486788624598-46o0ss9fd1i9oabje6bbjhve1960dcov.apps.googleusercontent.com"
+    /> -->
    
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>   
-   <script src="script.js"></script>     
-</body>
+    <script src="script.js"></script>
+    <!-- <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <div id="my-signin2"></div>
+    <div id="g_id_onload"
+     data-client_id="486788624598-46o0ss9fd1i9oabje6bbjhve1960dcov.apps.googleusercontent.com"
+     data-context="signup"
+     data-ux_mode="popup"
+     data-login_uri="https://5ff4-110-39-172-42.in.ngrok.io"
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="pill"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="medium"
+     data-logo_alignment="left">
+</div> -->
+    <!-- <form>
+<input id="passwordtype" type="password">
+<span class="show-password">Show</span>
+<span class="hide-password">hide</span>
+</form> -->
+
+    <!-- <form id="newForm" method="post" action="">
+      <label>Your Name</label>
+      <input type="text" name="name" id="yourname" />
+      <label>Your Email</label>
+      <input type="email" name="email" />
+      <label>Your number</label>
+      <input
+        type="tel"
+        name="number"
+        id="phoneNum"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+      />
+      <input type="submit" id="subBtn" name="btnSubmit" />
+    </form> -->
+
+
+
+
+
+    
+  </body>
 </html>

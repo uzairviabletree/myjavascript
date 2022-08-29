@@ -1,4 +1,19 @@
-.card-title {
+
+.hide-password{
+  display: none;
+}
+
+.showremove{
+    display: none;
+}
+
+
+
+
+
+
+
+/* .card-title {
     font-weight: 300;
     font-size: 2rem;
 }
@@ -41,4 +56,4 @@
 }
 .col.\31 4.m3.s14.offset-m0.offset-14{
     display: flex;
-}
+} */

@@ -1,3 +1,76 @@
+const names = ["Derek", "Joe", "Anna", "Coen", "Chris", "Macey", "Ella"];
+names.unshift("uzair");  //add a name to the beginning
+names.push("Ansari");   //add a name to the end
+names.shift("uzair");  //remove the name added in beginning
+names.pop(); //removes the element added in end
+names.splice(1); //Alter the original array to only contain the names before "Chris"
+var checkchris= names.includes("chris");    //check if chris is in array
+console.log(checkchris);
+
+const lowercasedNames = ["derek","joe","anna","coen","chris","macey","ella"];
+lowercasedNames.sort(); //sort the array alphabetically
+lowercasedNames.indexOf("chris"); //find the index number of chris  
+// console.log(lowercasedNames); 
+
+
+
+const afterChris=['coen', 'derek', 'ella', 'joe', 'macey'];
+
+
+
+
+
+
+// function onSuccess(googleUser) {
+//   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+//   document.write('Hello: ' + googleUser.getBasicProfile().getName());
+// }
+// function onFailure(error) {
+//   console.log(error);
+
+// }
+// function renderButton() {
+//   gapi.signin2.render('my-signin2', {
+//     'scope': 'profile email',
+//     'width': 240,
+//     'height': 50,
+//     'longtitle': true,
+//     'theme': 'dark',
+//     'onsuccess': onSuccess,
+//     'onfailure': onFailure
+//   });
+// }
+
+
+
+
+// show hide pass
+
+// jQuery(document).ready(function(){
+// jQuery('.show-password').click(function(){
+//     jQuery('#passwordtype').prop('type','text');
+//     jQuery('.hide-password').css('display', 'inline-block');    
+// jQuery('.show-password').addClass('showremove');
+
+// });
+
+// jQuery('.hide-password').click(function(){
+//     jQuery('#passwordtype').prop('type','password');
+//     jQuery('.show-password').removeClass('showremove');    
+// jQuery('.hide-password'). css('display', 'none');
+
+// });
+
+// });
+
+
+
+
+
+// / Task 1: create a function that will return a list of even numbers. it should take a length parameter for the length of the list. Length should be numbered and should not exceed 100
+
+
+
 function evenNumbers(length){
     try{
     validateEvenNumber(length);
@@ -59,76 +132,24 @@ function evenNumbers(length){
     recognize(23);
     
     
+//  Create a function which will show the list of products. Create a function ("add to cart") which will save products in the cart.
+
+// Note: use only script.js. no UI needed
+// Hint: use local storage to save dat
 
 
-
-
-
-function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+function getproducts() {
+    var pro_items = document.getElementsByClassName("productName");
+    var arrayNew = [];
+    for (let i = 0; i < pro_items.length; i++) {
+        var listProducts = pro_items[i].innerText;
+        arrayNew = [...arrayNew, listProducts];
     }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('my-signin', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
+    console.log(arrayNew);
+    localStorage.setItem('productnameuzair ', JSON.stringify(arrayNew));
 
-
-
-
-
-
-
-
-// Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAO76XN1vs9KDFGE0TvAqJLG9xAkWr6T3A",
-//   authDomain: "mydemoprojects1.firebaseapp.com",
-//   projectId: "mydemoprojects1",
-//   storageBucket: "mydemoprojects1.appspot.com",
-//   messagingSenderId: "284031118281",
-//   appId: "1:284031118281:web:fecc0787321faf58ae5618"
-// };
-
-// // Initialize Firebase
-// const app = firebase.initializeApp(firebaseConfig);
-// console.log(app);
-
-
-
-
-
-
-
-// / Task 1: create a function that will return a list of even numbers. it should take a length parameter for the length of the list. Length should be numbered and should not exceed 100
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+getproducts();
 
 
 
@@ -188,21 +209,3 @@ function onSuccess(googleUser) {
 
 
 
-//  Create a function which will show the list of products. Create a function ("add to cart") which will save products in the cart.
-
-// Note: use only script.js. no UI needed
-// Hint: use local storage to save dat
-
-
-// function getproducts() {
-//     var pro_items = document.getElementsByClassName("productName");
-//     var arrayNew = [];
-//     for (let i = 0; i < pro_items.length; i++) {
-//         var listProducts = pro_items[i].innerText;
-//         arrayNew = [...arrayNew, listProducts];
-//     }
-//     console.log(arrayNew);
-//     localStorage.setItem('productnameuzair ', JSON.stringify(arrayNew));
-
-// }
-// getproducts();
